@@ -1,0 +1,30 @@
+{"id":"q1","question":"Why is overlap used in chunking?","expected_answer":"Overlap preserves context across chunk boundaries so information spanning boundaries is still retrievable.","must_cite":true}
+{"id":"q2","question":"When is BM25 better than vector search?","expected_answer":"BM25 is better for exact-match queries like error codes, IDs, proper nouns, and specific technical terms.","must_cite":true}
+{"id":"q3","question":"What is hybrid retrieval and why use it?","expected_answer":"Hybrid retrieval combines BM25 keyword search with vector semantic search to improve recall across diverse query types.","must_cite":true}
+{"id":"q4","question":"Why does cross-encoder reranking improve precision?","expected_answer":"A cross-encoder scores query-passage pairs jointly, allowing more accurate relevance scoring than embedding similarity alone.","must_cite":true}
+{"id":"q5","question":"What should the system do when evidence is weak?","expected_answer":"It should abstain and say it doesn’t have enough evidence rather than hallucinate.","must_cite":true}
+{"id":"q6","question":"What is the purpose of a golden dataset?","expected_answer":"A golden dataset provides verified Q/A tests to evaluate and prevent quality regressions.","must_cite":true}
+{"id":"q7","question":"What does CI gating prevent?","expected_answer":"CI gating prevents merges that reduce retrieval/answer quality below thresholds.","must_cite":true}
+{"id":"q8","question":"What is reciprocal rank fusion used for?","expected_answer":"Reciprocal rank fusion merges ranked lists (e.g., BM25 and vector results) into one combined ranking.","must_cite":true}
+{"id":"q9","question":"What is the capital of France?","expected_answer":"","must_cite":false,"should_abstain":true}
+{"id":"q10","question":"Explain how photosynthesis works.","expected_answer":"","must_cite":false,"should_abstain":true}
+
+{"id":"q11","question":"What is the main goal of AskMyDocs?","expected_answer":"Build a domain-specific Ask My Docs system that answers grounded in evidence with proper citations and abstains when evidence is insufficient.","must_cite":true}
+{"id":"q12","question":"List the three phases (Phase 1, Phase 2, Phase 3) and one key addition in each.","expected_answer":"Phase 1 covers ingestion/chunking/vector storage/basic retrieval; Phase 2 adds hybrid retrieval, reranking, citation enforcement, prompt versioning; Phase 3 adds golden dataset, offline eval, and CI gating.","must_cite":true}
+{"id":"q13","question":"Why is token-aware chunking preferred over character or word counts?","expected_answer":"Token-aware chunking aligns chunk sizes with how LLMs consume context and avoids mismatches from variable tokenization.","must_cite":true}
+{"id":"q14","question":"What chunk size and overlap does the document recommend?","expected_answer":"Chunks of roughly 500–800 tokens with about a 100-token overlap.","must_cite":true}
+{"id":"q15","question":"What are common examples of queries where BM25 helps in enterprise RAG?","expected_answer":"Examples include error codes, ticket IDs, parameter names, file names, legal clause numbers, and uncommon proper nouns.","must_cite":true}
+
+{"id":"q16","question":"What is the typical reranking workflow described (candidates retrieved vs kept)?","expected_answer":"Retrieve a larger candidate set (e.g., 30–100) then rerank with a cross-encoder and keep a smaller top set (e.g., 5–10).","must_cite":true}
+{"id":"q17","question":"What is the main trade-off of cross-encoder reranking?","expected_answer":"It improves precision but is slower/more expensive than embedding retrieval, so it’s applied only to a small candidate set.","must_cite":true}
+{"id":"q18","question":"What does prompt versioning accomplish in this system?","expected_answer":"Prompts are stored in versioned configuration files so changes are reviewable, auditable, and reproducible like code.","must_cite":true}
+{"id":"q19","question":"Why does the report recommend retrieval-only evaluation for CI?","expected_answer":"Retrieval-only checks are fast and deterministic, while LLM-based evaluation can be slow and flaky; CI should be stable.","must_cite":true}
+{"id":"q20","question":"What kinds of question types should the golden dataset include?","expected_answer":"It should include direct fact questions, paraphrases, multi-hop within-doc questions, keyword-heavy questions, and abstention tests.","must_cite":true}
+
+{"id":"q21","question":"Why are resume PDFs a challenging document type?","expected_answer":"Resumes are often multi-column/visually structured, and PDF extraction can reorder or scramble text, harming retrieval.","must_cite":true}
+{"id":"q22","question":"List three common RAG failure modes and the mitigation for each, as described.","expected_answer":"Hallucinations mitigated by citation enforcement/abstention; poor exact-match recall mitigated by BM25+hybrid retrieval; noisy candidates mitigated by cross-encoder reranking; flaky eval mitigated by CI-stable retrieval gates.","must_cite":true}
+
+{"id":"q23","question":"BM25 vs Vector Search: which one is described as semantic retrieval using embeddings and nearest neighbors?","expected_answer":"Vector search is semantic retrieval using embeddings and nearest neighbors.","must_cite":true}
+{"id":"q24","question":"What does the term 'CI gating' mean in the glossary?","expected_answer":"Automated checks that block merges when quality drops below thresholds.","must_cite":true}
+
+{"id":"q25","question":"Who is the current CEO of Apple?","expected_answer":"","must_cite":false,"should_abstain":true}
