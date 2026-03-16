@@ -1,0 +1,22 @@
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# env
+.venv/
+venv/
+.env
+
+# data (keep raw docs out of git by default)
+data/
+!data/.gitkeep
+datasets/
+!datasets/.gitkeep
+
+# notebooks / misc
+.ipynb_checkpoints/
+.DS_Store
+EOF

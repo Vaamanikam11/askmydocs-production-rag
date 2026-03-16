@@ -1,0 +1,38 @@
+[project]
+name = "askmydocs"
+version = "0.1.0"
+description = "Production-grade RAG: hybrid retrieval, reranking, citation enforcement, eval + CI gating."
+requires-python = ">=3.11"
+dependencies = [
+  "streamlit>=1.36",
+  "chromadb>=0.5",
+  "sentence-transformers>=3.0",
+  "transformers>=4.43",
+  "torch",
+  "rank-bm25>=0.2.2",
+  "pydantic>=2.7",
+  "python-dotenv>=1.0",
+  "rich>=13.7",
+  "requests>=2.32",
+  "tiktoken>=0.7",
+  "pypdf>=4.2",
+  "markdown>=3.6",
+  "numpy>=1.26",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+  "mypy>=1.10",
+]
+
+# We'll add ragas + langchain/langgraph later once pipeline stabilizes,
+# to avoid dependency churn early.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["askmydocs"]
