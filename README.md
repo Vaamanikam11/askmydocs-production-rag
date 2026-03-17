@@ -1,5 +1,7 @@
 # AskMyDocs — Production RAG (Hybrid Retrieval + Rerank + Citations + CI)
 
+Try it out here: https://askmydocs-rag-project.streamlit.app/
+
 ![CI](https://github.com/Vaamanikam11/askmydocs-production-rag/actions/workflows/ci.yml/badge.svg)
 
 Domain-specific “Ask My Docs” system with:
