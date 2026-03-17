@@ -19,7 +19,7 @@ datasets/
 # notebooks / misc
 .ipynb_checkpoints/
 .DS_Store
-
+EOF
 
 
 # allow small committed evaluation assets
@@ -29,3 +29,4 @@ datasets/
 !datasets/ci_docs/
 !datasets/ci_docs/**
 
+artifacts/*.json

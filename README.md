@@ -1,19 +1,18 @@
-# Documentation Index
+# AskMyDocs — Production RAG (Hybrid Retrieval + Rerank + Citations + CI)
 
-## Architecture
-- `architecture/overview.md`
-- `architecture/components.md`
+![CI](https://github.com/Vaamanikam11/askmydocs-production-rag/actions/workflows/ci.yml/badge.svg)
 
-## Guides
-- `guides/local_dev.md`
-- `guides/ingestion.md`
-- `guides/retrieval.md`
-- `guides/reranking.md`
-- `guides/citations.md`
+Domain-specific “Ask My Docs” system with:
+- Hybrid retrieval (BM25 + vector)
+- Cross-encoder reranking
+- Citation enforcement + abstention when evidence is weak
+- CI-gated offline evaluation to prevent quality regressions
 
-## Evaluation
-- `evaluation/golden_dataset.md`
-- `evaluation/ragas.md`
-- `evaluation/ci_gating.md`
+## Quickstart
 
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
 
+python3 scripts/ingest.py
+streamlit run app/streamlit_app.py
