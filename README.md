@@ -4,8 +4,6 @@
 
 Try it out here: https://askmydocs-rag-project.streamlit.app/
 
-Live demo: <YOUR_STREAMLIT_URL>
-
 Ask questions over uploaded PDFs/Markdown/TXT using a production-style RAG pipeline:
 - Hybrid retrieval (BM25 + vector search) + Reciprocal Rank Fusion (RRF)
 - Cross-encoder reranking
